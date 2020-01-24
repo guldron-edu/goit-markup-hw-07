@@ -43,7 +43,7 @@ body {
   padding: 0;
 }
 
-/* HEADER */
+/************************* HEADER *************************/
 .head {
   position: absolute;
   display: flex;
@@ -92,29 +92,8 @@ body {
   border: 2px solid white;
   border-radius: 20px;
 }
-@media screen and (max-width: 575px) {
-  .head {
-    flex-direction: column-reverse;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
 
-  .head .registration {
-    justify-content: center;
-    margin-bottom: 120px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .head {
-    justify-content: space-between;
-    padding-top: 40px;
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-}
-
-/* MAIN */
+/************************* MAIN *************************/
 .hero {
   width: 100%;
   text-align: center;
@@ -160,73 +139,7 @@ body {
   color: rgb(255, 78, 80);
 }
 
-@media screen and (max-width: 575px) {
-  .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url('../images/mobile.jpg');
-    background-position: center;
-    background-size: cover;
-    padding-top: 230px;
-    padding-bottom: 140px;
-  }
-
-  .hero .title {
-    max-width: 320px;
-    margin-bottom: 20px;
-  }
-  .hero .text {
-    display: inline-block;
-    /* max-width: 320px; */
-    padding-right: 30px;
-    padding-left: 30px;
-    margin-bottom: 20px;
-  }
-
-  .hero .link {
-    width: 280px;
-  }
-}
-
-@media screen and (max-width: 360px) {
-  .hero .text {
-    max-width: 300px;
-  }
-}
-
-@media screen and (min-width: 576px) {
-  .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url('../images/tablet.jpg');
-
-    padding-top: 225px;
-    padding-bottom: 230px;
-  }
-
-  .hero .title {
-    font-size: 52px;
-    margin-bottom: 45px;
-    padding-left: 15px;
-    padding-right: 15px;
-    max-width: 535px;
-  }
-
-  .hero .text {
-    font-size: 24px;
-    margin-bottom: 40px;
-  }
-  .hero .link {
-    width: 225px;
-  }
-}
-
-@media screen and (min-width: 1176px) {
-  .hero {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-      url('../images/desktop.jpg');
-  }
-}
-
-/* FIND-PARTNER */
+/*********************** FIND-PARTNER ***********************/
 .find-partner {
   width: 100%;
   text-align: center;
@@ -366,8 +279,51 @@ body {
   background-color: rgba(255, 78, 80, 0);
   color: rgb(255, 78, 80);
 }
+/******************  @MEDIA  ******************/
+
+@media screen and (max-width: 360px) {
+  .hero .text {
+    max-width: 300px;
+  }
+}
+/************************ max-width: 575px ************************/
 
 @media screen and (max-width: 575px) {
+  .head {
+    flex-direction: column-reverse;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .head .registration {
+    justify-content: center;
+    margin-bottom: 120px;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../images/mobile.jpg');
+    background-position: center;
+    background-size: cover;
+    padding-top: 230px;
+    padding-bottom: 140px;
+  }
+
+  .hero .title {
+    max-width: 320px;
+    margin-bottom: 20px;
+  }
+  .hero .text {
+    display: inline-block;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  .hero .link {
+    width: 280px;
+  }
+
   .find-partner {
     padding-right: 20px;
     padding-left: 20px;
@@ -395,8 +351,39 @@ body {
     width: 280px;
   }
 }
-
+/****************** min-width: 576px ******************/
 @media screen and (min-width: 576px) {
+  .head {
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../images/tablet.jpg');
+
+    padding-top: 225px;
+    padding-bottom: 230px;
+  }
+
+  .hero .title {
+    font-size: 52px;
+    margin-bottom: 45px;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 535px;
+  }
+
+  .hero .text {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+  .hero .link {
+    width: 225px;
+  }
+
   .find-partner .title {
     margin-bottom: 40px;
   }
@@ -419,15 +406,10 @@ body {
     flex-basis: 220px;
   }
 }
-
+/******* min-width: 576px and max-width: 1175px *******/
 @media screen and (min-width: 576px) and (max-width: 1175px) {
-  /* .find-partner .list {
-    padding-left: 35px;
-    padding-right: 35px;
-  } */
-
   .find-partner .item {
-    margin-right: 20px;
+    margin-right: auto;
     margin-bottom: 50px;
   }
   .find-partner .item:nth-child(2n) {
@@ -438,8 +420,14 @@ body {
     margin-bottom: 0;
   }
 }
+/***************** min-width: 1176px *****************/
 
 @media screen and (min-width: 1176px) {
+  .hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+      url('../images/desktop.jpg');
+  }
+
   .find-partner .list {
     max-width: 940px;
   }
