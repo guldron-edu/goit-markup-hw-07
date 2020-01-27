@@ -177,7 +177,6 @@ body {
   border-radius: 50px;
   bottom: 15px;
   right: 50px;
-  background-size: 40%;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -185,21 +184,25 @@ body {
 .find-partner .list .one::after {
   background-image: url('../images/tv.svg');
   background-color: #ff4e50;
+  background-size: 50%;
 }
 
 .find-partner .list .two::after {
   background-image: url('../images/flask.svg');
   background-color: #ffa507;
+  background-size: 40%;
 }
 
 .find-partner .list .three::after {
   background-image: url('../images/cap.svg');
   background-color: #1dd7ad;
+  background-size: 55%;
 }
 
 .find-partner .list .four:after {
   background-image: url('../images/telegram.svg');
   background-color: #4e73db;
+  background-size: 50%;
 }
 
 .find-partner .list .link:hover .wrapper::after {
